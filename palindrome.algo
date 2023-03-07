@@ -1,0 +1,13 @@
+FUNCTION  pro( mot : STRING) : BOOLEAN
+VAR
+	j,i : INTEGER ;
+BEGIN
+	j := mot.length-1;
+	FOR i  FROM 0 TO mot.length-1
+		IF (mot[i] <> mot[j]) THEN
+			RETURN  false ;
+		END_IF
+        j := j-1;
+	END_FOR
+	RETURN true ;
+END
